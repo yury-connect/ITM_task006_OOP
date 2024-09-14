@@ -22,7 +22,19 @@ public class Solution {
     }
 
     public static String getObjectType(Object o) {
-        //Напишите тут ваше решение
+        if (o.getClass().getSimpleName().equals("Cow")) {
+            return "Корова";
+        }
+
+        if (o.getClass().getSimpleName().equals("Dog")) {
+            return "Собака";
+        }
+
+        if (o.getClass().getSimpleName().equals("Whale")) {
+            return "Кит";
+        }
+
+        // Pig не обрабатываем, чтобы не показывалось "Неизвестное животное"
 
         return "Неизвестное животное";
     }
