@@ -17,8 +17,19 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
+        CanEat dog = new Dog();
+        dog.eat();
 
+        CanEat duck = new Duck();
+        duck.eat();
+
+        CanMove car = new Car();
+        car.move();
+
+        CanFly airplane = new Airplane();
+        airplane.fly();
     }
+
 
     public interface CanFly {
         public void fly();
@@ -32,15 +43,32 @@ public class Solution {
         public void eat();
     }
 
-    public class Dog {
+
+    public static class Dog implements CanEat {
+        @Override
+        public void eat() {
+            System.out.println("Dog CanEat");
+        }
     }
 
-    public class Duck {
+    public static class Duck implements CanEat {
+        @Override
+        public void eat() {
+            System.out.println("Duck CanEat");
+        }
     }
 
-    public class Car {
+    public static class Car implements CanMove {
+        @Override
+        public void move() {
+            System.out.println("Car CanMove");
+        }
     }
 
-    public class Airplane {
+    public static class Airplane implements CanFly {
+        @Override
+        public void fly() {
+            System.out.println("Airplane CanFly");
+        }
     }
 }
