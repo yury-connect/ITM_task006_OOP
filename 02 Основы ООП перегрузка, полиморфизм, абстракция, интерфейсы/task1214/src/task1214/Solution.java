@@ -15,14 +15,19 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-
+        Animal cow = new Cow();
+        System.out.println(cow.getName());
     }
 
     public static abstract class Animal {
         public abstract String getName();
     }
 
-    public static class Cow {
+    public static class Cow extends Animal {
+        @Override
+        public String getName() {
+            String methodName = this.getClass().getSimpleName();
+            return "I am '" + methodName + "', my name is Burenka";
+        }
     }
-
 }
