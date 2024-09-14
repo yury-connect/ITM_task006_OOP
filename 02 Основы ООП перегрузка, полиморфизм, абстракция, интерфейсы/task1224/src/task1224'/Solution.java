@@ -26,7 +26,21 @@ public class Solution {
     }
 
     public static String getObjectType(Object o) {
-        //напишите тут ваш код
+        if (o.getClass().getSimpleName().equals("Cat")) {
+            return "Кот";
+        }
+
+        if (o.getClass().getSimpleName().equals("Tiger")) {
+            return "Тигр";
+        }
+
+        if (o.getClass().getSimpleName().equals("Lion")) {
+            return "Лев";
+        }
+
+        if (o.getClass().getSimpleName().equals("Bull")) {
+            return "Бык";
+        }
 
         return "Животное";
     }
