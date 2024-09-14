@@ -2,7 +2,8 @@ package task1123;
 
 /*
 Минимакс
-Реализуй метод, который возвращает объект класса Pair. В поле x этого объекта должно содержаться минимальное число, а в поле y - максимальное число из массива inputArray.
+Реализуй метод, который возвращает объект класса Pair.
+В поле x этого объекта должно содержаться минимальное число, а в поле y - максимальное число из массива inputArray.
 
 
 Requirements:
@@ -29,9 +30,17 @@ public class Solution {
             return new Pair(null, null);
         }
 
-        // напишите тут ваш код
+        // напишите тут ваш код   // Я реализовал решение в строках 34-43
+        Pair minMax = new Pair(inputArray[0], inputArray[0]);
+        for (int item: inputArray)
+            if (item < minMax.x) {
+                minMax.x = item;
+            }
+            else if (item > minMax.y) {
+                minMax.y = item;
+            }
 
-        return new Pair(0, 0);
+        return minMax;
     }
 
     public static class Pair {
