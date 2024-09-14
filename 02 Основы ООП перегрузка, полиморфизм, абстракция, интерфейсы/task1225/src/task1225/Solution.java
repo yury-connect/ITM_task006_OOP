@@ -31,27 +31,37 @@ public class Solution {
     }
 
     public static String getObjectType(Object o) {
-        //напишите тут ваш код
+        if (o.getClass().getSimpleName().equals("Cat")) {
+            return "Кот";
+        }
 
-        return "Животное";
+        if (o.getClass().getSimpleName().equals("Tiger")) {
+            return "Тигр";
+        }
+
+        if (o.getClass().getSimpleName().equals("Lion")) {
+            return "Лев";
+        }
+
+        if (o.getClass().getSimpleName().equals("Bull")) {
+            return "Бык";
+        }
+
+        if (o.getClass().getSimpleName().equals("Cow")) {
+            return "Корова";
+        }
+
+        if (o.getClass().getSimpleName().equals("Animal")) {
+            return "Животное";
+        }
+
+        return "неопознанное существо";
     }
 
-    public static class Cat extends Animal   //<--Классы наследуются!!
-    {
-    }
-
-    public static class Tiger extends Cat {
-    }
-
-    public static class Lion extends Cat {
-    }
-
-    public static class Bull extends Animal {
-    }
-
-    public static class Cow extends Animal {
-    }
-
-    public static class Animal {
-    }
+    public static class Cat extends Animal{}   //<--Классы наследуются!!
+    public static class Tiger extends Cat {}
+    public static class Lion extends Cat {}
+    public static class Bull extends Animal {}
+    public static class Cow extends Animal {}
+    public static class Animal {}
 }
