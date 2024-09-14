@@ -15,23 +15,25 @@ Requirements:
 7. Правильно унаследуй класс Dog.
 8. Правильно унаследуй класс Car.*/
 
+
+// В данной задаче принципов наследования не усматриваю, перечисленные объекты не могут наследоваться друг от друга.
 public class Solution {
     public static void main(String[] args) {
     }
 
-    public class House extends Cat {
+    public class House {
 
     }
 
-    public class Cat extends Car {
+    public class Cat {
 
     }
 
-    public class Car extends Dog {
+    public class Car {
 
     }
 
-    public class Dog extends House {
+    public class Dog {
 
     }
 }
