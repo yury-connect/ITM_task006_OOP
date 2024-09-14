@@ -13,8 +13,37 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-
+        print((byte) 12);   //  byte
+        print((short) 23);  //  short
+        print(34);          //  int
+        print(45L);         //  long
+        print(56D);         //  double
+        print(67F);         //  float
     }
 
-    //Напишите тут ваши методы
+
+
+    public static void print(byte byteValue) {
+        System.out.println("byte value = " + byteValue);
+    }
+
+    public static void print(short shortValue) {
+        System.out.println("short value = " + shortValue);
+    }
+
+    public static void print(int intValue) {
+        System.out.println("int value = " + intValue);
+    }
+
+    public static void print(long longValue) {
+        System.out.println("long value = " + longValue);
+    }
+
+    public static void print(double doubleValue) {
+        System.out.println("double value = " + doubleValue);
+    }
+
+    public static void print(float floatValue) {
+        System.out.println("float value = " + floatValue);
+    }
 }

@@ -18,9 +18,11 @@ public class Solution {
         print("ITM");
     }
 
+
     public static void print(int i) {
         System.out.println("int i = " + i);
     }
+
     public static void print(String line) {
         System.out.println("String line = " + line);
     }

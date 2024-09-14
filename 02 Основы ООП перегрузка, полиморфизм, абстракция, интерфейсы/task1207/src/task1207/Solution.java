@@ -19,9 +19,11 @@ public class Solution {
         print(new Integer(456));
     }
 
+
     public static void print(int iInt) {
         System.out.println("int i = " + iInt);
     }
+
     public static void print(Integer iInteger) {
         System.out.println("Integer i = " + iInteger);
     }
