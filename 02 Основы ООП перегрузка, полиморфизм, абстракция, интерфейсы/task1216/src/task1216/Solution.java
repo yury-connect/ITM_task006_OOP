@@ -17,6 +17,8 @@ public class Solution {
 
     }
 
-    //add an interface here - добавь интерфейс тут
-
+    public interface CanFly {
+        public void takeoff(); // взлет
+        public void landing(); // приземление
+    }
 }
