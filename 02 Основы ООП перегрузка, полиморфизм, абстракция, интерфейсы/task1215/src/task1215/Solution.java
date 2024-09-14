@@ -16,7 +16,13 @@ Requirements:
 public class Solution {
     public static void main(String[] args) {
 
+        Pet cat = new Cat().getChild();
+        System.out.println(cat.getName());
+
+        Pet dog = new Dog().getChild();
+        System.out.println(dog.getName());
     }
+
 
     public static abstract class Pet {
         public abstract String getName();
@@ -24,12 +30,31 @@ public class Solution {
         public abstract Pet getChild();
     }
 
-    public static class Cat {
 
+    public static class Cat extends Pet {
+
+        @Override
+        public String getName() {
+            return "I am " + this.getClass().getSimpleName();
+        }
+
+        @Override
+        public Pet getChild() {
+            return new Cat();
+        }
     }
 
-    public static class Dog {
 
+    public static class Dog extends Pet {
+
+        @Override
+        public String getName() {
+            return "I am " + this.getClass().getSimpleName();
+        }
+
+        @Override
+        public Pet getChild() {
+            return new Dog();
+        }
     }
-
 }
