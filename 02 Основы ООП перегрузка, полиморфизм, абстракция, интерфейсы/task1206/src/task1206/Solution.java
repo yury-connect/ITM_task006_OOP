@@ -14,8 +14,14 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-
+        print(123);
+        print("ITM");
     }
 
-    //Напишите тут ваши методы
+    public static void print(int i) {
+        System.out.println("int i = " + i);
+    }
+    public static void print(String line) {
+        System.out.println("String line = " + line);
+    }
 }
