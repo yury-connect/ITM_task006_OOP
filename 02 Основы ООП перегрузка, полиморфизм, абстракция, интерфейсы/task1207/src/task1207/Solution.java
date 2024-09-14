@@ -15,8 +15,14 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-
+        print(123);
+        print(new Integer(456));
     }
 
-    //Напишите тут ваши методы
+    public static void print(int iInt) {
+        System.out.println("int i = " + iInt);
+    }
+    public static void print(Integer iInteger) {
+        System.out.println("Integer i = " + iInteger);
+    }
 }
