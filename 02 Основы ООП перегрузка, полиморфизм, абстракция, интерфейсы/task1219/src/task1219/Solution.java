@@ -3,7 +3,8 @@ package task1219;
 /* 
 Создаем человека
 Есть public интерфейсы CanFly (летать), CanRun (бежать/ездить), CanSwim (плавать).
-Добавь эти интерфейсы классам Human (человек), Duck (утка), Penguin (пингвин), Airplane (самолет), и не забудь про реализацию методов интерфейсов (в методах ничего делать не нужно).
+Добавь эти интерфейсы классам Human (человек), Duck (утка), Penguin (пингвин), Airplane (самолет),
+и не забудь про реализацию методов интерфейсов (в методах ничего делать не нужно).
 
 
 Requirements:
@@ -17,7 +18,17 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
+        CanRun human = new Human();
+        human.run();
 
+        CanSwim duck = new Duck();
+        duck.swim();
+
+        CanSwim penguin = new Penguin();
+        penguin.swim();
+
+        CanFly airplane = new Airplane();
+        airplane.fly();
     }
 
     public interface CanFly {
@@ -33,19 +44,35 @@ public class Solution {
     }
 
 
-    public class Human {
+    public static class Human implements CanRun {
 
+        @Override
+        public void run() {
+            System.out.println("Human is CanRun");
+        }
     }
 
-    public class Duck {
+    public static class Duck implements CanSwim {
 
+        @Override
+        public void swim() {
+            System.out.println("Duck is CanSwim");
+        }
     }
 
-    public class Penguin {
+    public static class Penguin implements CanSwim {
 
+        @Override
+        public void swim() {
+            System.out.println("Penguin is CanSwim");
+        }
     }
 
-    public class Airplane {
+    public static class Airplane implements CanFly {
 
+        @Override
+        public void fly() {
+            System.out.println("Airplane is CanFly");
+        }
     }
 }
