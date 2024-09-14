@@ -23,14 +23,17 @@ public class Solution {
         System.out.println(min(5.0, 6.0));
     }
 
+
     public static int min(int a, int b) {
         System.out.println("Отработал метод с типом параметра   'int'");
         return a < b ? a : b;
     }
+
     public static long min(long a, long b) {
         System.out.println("Отработал метод с типом параметра   'long'");
         return a < b ? a : b;
     }
+
     public static double min(double a, double b) {
         System.out.println("Отработал метод с типом параметра   'double'");
         return a < b ? a : b;
