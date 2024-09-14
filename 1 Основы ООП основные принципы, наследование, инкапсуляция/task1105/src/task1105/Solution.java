@@ -2,7 +2,9 @@ package task1105;
 
 /* 
 ИТ-компания
-Исправь девять классов: Worker (сотрудник), Clerk (клерк), IT (ИТ-специалист), Programmer (программист), ProjectManager (менеджер проекта), CTO (технический директор), HR (рекрутер), OfficeManager (офис-менеджер), Cleaner (уборщик).
+Исправь девять классов: Worker (сотрудник), Clerk (клерк), IT (ИТ-специалист),
+    Programmer (программист), ProjectManager (менеджер проекта), CTO (технический директор),
+    HR (рекрутер), OfficeManager (офис-менеджер), Cleaner (уборщик).
 Унаследуй программиста, менеджера проекта и технического директора от ИТ-специалиста.
 Унаследуй рекрутера, уборщика и офис-менеджера от клерка.
 Унаследуй клерка и ИТ-специалиста от сотрудника.
@@ -30,35 +32,35 @@ public class Solution {
 
     }
 
-    public class Clerk {
+    public class Clerk extends Worker {
 
     }
 
-    public class IT {
+    public class IT extends Worker {
 
     }
 
-    public class Programmer {
+    public class Programmer extends IT {
 
     }
 
-    public class ProjectManager {
+    public class ProjectManager extends IT {
 
     }
 
-    public class CTO {
+    public class CTO extends IT {
 
     }
 
-    public class OfficeManager {
+    public class OfficeManager extends Clerk {
 
     }
 
-    public class HR {
+    public class HR extends Clerk {
 
     }
 
-    public class Cleaner {
+    public class Cleaner extends Clerk {
 
     }
 }
