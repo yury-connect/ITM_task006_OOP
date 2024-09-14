@@ -21,18 +21,65 @@ Requirements:
 public class Solution {
 
     public static void main(String[] args) {
-
+        new Cat().run();
+        new Cat().climb();
+        new Dog().run();
+        new Tiger().run();
+        new Tiger().climb();
+        new Duck().run();
+        new Duck().fly();
     }
 
-    public class Cat {
+    public interface CanFly { // летать
+        public void fly();
+    }
+    public interface CanClimb { // лазить по деревьям
+        public void climb();
+    }
+    public interface CanRun { // бегать
+        public void run();
     }
 
-    public class Dog {
+    public static class Cat implements CanRun, CanClimb {
+        @Override
+        public void run() {
+            System.out.println("Im Cat, i CanRun");
+        }
+
+        @Override
+        public void climb() {
+            System.out.println("Im Cat, i CanClimb");
+        }
+}
+
+    public static class Dog implements CanRun {
+        @Override
+        public void run() {
+            System.out.println("Im Dog, i CanRun");
+        }
     }
 
-    public class Tiger extends Cat {
+    public static class Tiger extends Cat {
+        @Override
+        public void run() {
+            System.out.println("Im Tiger, i CanRun");
+        }
+
+        @Override
+        public void climb() {
+            System.out.println("Im Tiger, i CanClimb");
+        }
     }
 
-    public class Duck {
+    public static class Duck implements CanRun, CanFly {
+        @Override
+        public void run() {
+            System.out.println("Im Duck, i CanRun");
+        }
+
+        @Override
+        public void fly() {
+            System.out.println("Im Duck, i CanFly");
+        }
     }
 }
